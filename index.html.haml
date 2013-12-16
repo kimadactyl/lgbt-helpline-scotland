@@ -1,0 +1,212 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+-# Consider adding an manifest.appcache: h5bp.com/d/Offline
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => "utf-8" }/
+    
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+    
+    %title LGBT Helpline Scotland
+    %meta{ :name => "description", :content => "We provide information and emotional support to lesbian, gay, bisexual and transgender people and their families, friends and supporters across Scotland. We are also here to support those questioning or wanting to discuss their sexuality or gender identity." }/
+    %meta{ :name => "keywords", :content => "LGBT, Scotland, Lesbian, Gay, Bisexual, Bi, Trans, Transgender, Queer, Transsexual, Helpline"}
+    %meta{ :name => "author", :content => "Kim Foale" }/
+    
+    -# Mobile viewport optimized: j.mp/bplateviewport
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+     
+    -# CSS: implied media="all"
+    -# CSS concatenated and minified via ant build script
+    %link{ :rel => "stylesheet", :href => "stylesheets/style.css"}/
+    
+    %script{ :src => "js/modernizr-2.0.6.min.js" }
+    
+  %body
+    .container
+      %header
+        #brand
+          %h1 <acronym title="Lesbian, Gay, Bisexual and Transgender">LGBT</acronym> Helpline Scotland <br><a href="tel:+443001232523">0300 123 2523</a>
+          %h3 Open every Tuesday and Wednesday between 12 - 9pm
+          %p
+            We provide information and emotional support to lesbian, gay, bisexual and transgender people and their families, friends and supporters across Scotland. We are also here to support those questioning or wanting to discuss their sexuality or gender identity.
+        #logo
+          %p Service Provided By
+          %a{:href => "http://www.lgbthealth.org.uk" }
+            %img{:src => 'images/logo.png', :alt => 'LGBT Center Logo'}
+    .nav-container.container
+      %nav{:role => 'navigation'}
+        %ul
+          %li.home
+            %a{:href => "#"} Top of page
+          %li 
+            %a{:href => "#faq"} Q&A
+          %li 
+            %a{:href => "#private"} Keeping Your Call Private
+          %li 
+            %a{:href => "#other-support"} Other LGBT Support in Scotland
+          %li.last 
+            %a{:href => "#flyers-posters"} Flyers and Posters
+    .container
+      #main{:role => 'main'}
+        #faq
+          .intro
+            %h2 Questions and Answers
+          .column
+            %h3
+              %a Why call the helpline?
+            %p
+              You can bring anything to the call. We have access to a wide range of information on, for example, sexual health, support organisations, social groups, the commercial 'scene' and where to get support with any issues you have. 
+            %p
+              We are also here for you if you just want to talk. It can be comforting to explore your feelings, get something off your chest or just to know that you are not alone. We can discuss a range of issues with you including sexuality, coming out, gender identity, relationships and sexual and emotional wellbeing.
+            %p
+              We understand that it can be difficult to pick up the phone, but please remember that your call is confidential and we are not here to judge you or tell you what to do; simply to support you in whatever you are going through.
+
+            %h3 
+              %a Who will answer your call?
+            %p
+              The helpline is supported by experienced, trained, friendly, non-judgemental staff and volunteers who are happy to listen. Most of us identity as LGBT and we are all experienced in supporting LGBT people with a wide range of issues.
+          .column
+            %h3
+              %a What will the call cost?
+            %p
+              Calls to this number will cost you the same as calls to local landline numbers, and they are included in any special call allowances or packages you may have either on a mobile or landline.
+
+            %h3
+              %a Emotional Support
+            %p
+              When offering emotional support to our callers, we believe that everyone has their own identities, needs and ways of coping. There are no one-size-fits-all solutions to even the most common of personal issues, and we aim to help you identify what is best for you. 
+            %p
+              You do not necessarily have to identify as lesbian, gay, bisexual or transgender and we understand that these terms can feel limiting or irrelevant to some people when discussing their sexuality or gender identity.
+          
+            %h3
+              %a Sexual Health
+            %p
+              We know that it can feel embarrassing to talk through these kinds of things with your GP or other professionals, and it may not be so easy to talk to a partner about sex. 
+            %p
+              We are not healthcare professionals and we don't have specialised medical knowledge, but we are trained and experienced in safer sex matters and in talking about sex, sexuality and sexual health. 
+            %p
+              If we don't know the answers, we'll point you in the direction of someone who does.
+
+          .column.last
+            %h3
+              %a LGBT Hate Crime
+            %p
+              If you have been the victim of an LGBT hate crime or incident, or if you are an LGBT person who has been targeted due to your race, faith/belief or disability, our helpline can provide you with immediate support both emotionally and with the practicalities of dealing with what's happened to you.
+            %p
+              We can help you to decide whether and how to involve the police and we can report the incident confidentially on your behalf - even if you wish to remain anonymous. Our “third party reporting” service allows you to report a crime or incident confidentially to a supportive third party, rather than directly to the police. You can remote report anonymously, which can still give the police information that helps them fight hate crime and increase community safety. <a href="http://lgbthealth.org.uk/content/community-safety">For more information on hate crime, visit LGBT Health and Wellbeing&rsquo;s website</a>.
+            
+            %h3 
+              %a Who provides the service?
+            %p
+              LGBT Helpline Scotland is provided by LGBT Health and Wellbeing (based in Edinburgh). For more details on the wide range of services, social groups, courses and support that we offer LGBT people in Edinburgh and across Scotland, visit our website: www.lgbthealth.org.uk
+              The service is funded by the Scottish Government.
+        
+        #private
+          .intro
+            %h2 Keeping Your Call Private
+            %p
+              We understand that you might want to keep your call private from other people in your life. Below we have compiled some simple information which can help you to keep your call discreet.
+          .column
+            %h3 The phone you are using
+            %p
+              Are you using a shared phone, such as a house landline? If so, please be aware that there is no way of hiding our number from any itemised bills your home/building receives. Occasionally we receive calls from people asking us who we are and why our number is on their bill. Whilst we aim to be as discreet as possible, we ultimately cannot lie about who we are if we are questioned. If you have a mobile phone, you might find this to be more discreet (calls are charged at local rates, even on mobiles, and they are included in any special call packages you have).
+            %p
+              If you use a mobile phone and you are concerned that somebody might look at your phones “call log” (a list which most mobiles contain, detailing all calls which have been made), check your manual to see how to delete your “call log” or “call history” after making the call. If you don’t have the manual, check online for details on how you can delete the list on your particular phone model. 
+            %p
+              Although calls which are made on payphones/public phones can’t be traced back to you, outside distractions may inhibit your ability to speak freely.
+          .column
+            %h3 Internet
+            %p
+              Internet browsers or “web browsers” are the programs you use to view websites, for example Google Chrome, Internet Explorer and Mozilla Firefox. You may not be aware, but often the history of all websites you have visited is automatically stored on your browser and it is possible that somebody else who uses your computer will find this information without even trying. If you share a computer and you want to make sure that nobody else can discover that you have visited this site, <a href="http://www.wikihow.com/Delete-Web-History">you can find out how to delete your web history quickly and easily on this wiki page</a>. If the browser you use isn’t listed on this page, simply perform a small google/internet search for "delete web history", and add the browser's name afterwards.
+          .column.last
+            %h3 Hiding this website
+            %p
+              If someone enters the room while you are looking at this website, you can hit the “Panic!” button at any time and you will be immediately directed to the BBC Weather website. Your browser history will be updated to show you visited Google.
+
+        #other-support
+          .intro
+            %h2 LGBT Support in Scotland
+
+          .column-wide
+            %h3 Helplines
+            We are open every Tuesday and Wednesday from 12-9pm. Outside of these hours, you can call the following helplines for support:
+
+            %ul
+              %li <a href="http://www.llgs.org.uk/">London Lesbian &amp; Gay Switchboard</a> is open daily from 10am-11pm and regularly takes calls from LGBT people across the UK. <a href="tel:+443003300630">0300 330 0630</a>. 
+              %li <a href="http://www.parentsenquiry.pwp.blueyonder.co.uk/">Parents&rsquo; Enquiry Scotland</a> is a telephone support service for parents of LGBT people. Their numbers and hours can be found <a href="http://www.parentsenquiry.pwp.blueyonder.co.uk/">on their website</a>.
+              %li <a href="http://www.samaritans.org/">The Samaritans</a> have telephone support volunteers working 24 hours a day all over Scotland. You can reach them any time of the day or night on <a href="tel:+4408457909090">08457 90 90 90</a>. 
+
+          .column-wide.last
+            %h3 Other Resources
+
+            %p
+              <a href="http://www.scotsgay.co.uk/listings/index.html">Scotsgay magazine is a monthly magazine</a> targeted at the LGBT community in Scotland. Their listings include an extensive list of LGBT support groups, venues and services across the country.
+
+            %p
+              <a href="http://www.lesbianscotland.com/">Lesbian Scotland has links to groups, services and support organisations across the country</a>. Many of the listings are relevant to the whole LGBT community,and not just the lesbian community.
+
+            %p
+              <a href="http://www.scottishtrans.org">The Scottish Transgender Alliance (STA) website</a> is an excellent resource for people who identify as transgender or those who are questioning their gender identity. Includes links to trans groups and services across Scotland.
+
+        #flyers-posters
+          .intro
+            %h2 Download our Flyers and Posters
+          .column-wide
+            %p
+              If you work or organise events in places where you think our helpline could be a benefit to those attending, you can order quality promotional flyers and/or posters by emailing <a href="mailto:stephen@lgbthealth.org">stephen@lgbthealth.org.uk</a>. If you would like to print out a small amount yourself, you can click on the links here.
+
+            %h3 Funded By
+            %img{:src => "images/scots-gov.jpg", :alt => "LGBT Helpline flyer", :style => "width: auto"}
+
+
+          .column-wide.last
+            %img{:src => "images/flyer-small.png", :alt => "LGBT Helpline flyer"}
+            %p
+              %a{:href => "images/flyer.tif"} Download this as a 15MB .tiff file
+
+            %img{:src => "images/flyer-back-small.png", :alt => "LGBT Helpline flyer - Back"}
+            %p
+              %a{:href => "images/flyer-back.tif"} Download this as a 19MB .tiff file
+
+      %button#panic
+        %h3 Panic!
+        %p Click to leave at <br>any time, or press <tt>ESC</tt>
+
+
+      %footer
+        &nbsp;
+    -# end of #container
+    
+    -# Javascript at the bottom for fast page loading
+    
+    -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" }
+
+    -# scripts concatenated and minified via ant build script
+    %script{ :src => "javascripts/plugins.js" }
+    %script{ :src => "javascripts/jquery.sticky.js" }
+    %script{ :src => "javascripts/script.js" }
+    -# end scripts
+    
+    -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+    -#  change the UA-XXXXX-X to be your site's ID
+    %script
+      var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+      s.parentNode.insertBefore(g,s)}(document,"script"));
+    
+    -# 
+      Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+      chromium.org/developers/how-tos/chrome-frame-getting-started
+    
+    <!--[if lt IE 7]>
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js" }
+    %script
+      window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})});
+    <![endif]-->

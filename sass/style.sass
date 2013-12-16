@@ -1,0 +1,192 @@
+// Here's where we define some default constants
+@import partials/base
+
+// Then we'll import the compass extension
+@import html5-boilerplate
+
+// Now, you can simply include everything
+// (except print and helpers) by uncommeting this line
+//@include html5-boilerplate;
+
+// Or, you can pick and choose only the sections
+// you want by using the this include
+
++html5-boilerplate-normalize((html5, base, selection, links, typography, lists, images, svg, figures, forms, tables))
+
+// Or, you can import the "overrides" partial if
+// you want more control over individual mixins
+//@import "partials/overrides";
+
+// Finally, put your own styles in these partials
+// and add more as needed (i.e. forms, tables, nav)
+@import partials/fonts
+@import partials/page
+
+// Helpers classes should come second-to-last
+
++html5-boilerplate-helpers((ir, hidden, visuallyhidden, invisible, clearfix))
+
+// Media should come last
+@import partials/media
+
+@import susy
+
+// Colours
+$logo-main: #A04679
+$logo-sub:  #300D71
+
+$purple:    #6C78FF
+$red:       #CF010B
+$orange:    #F08712
+$yellow:    #FFF41E
+$green:     #ADCE1B
+$blue:      #0082DA
+$lightblue: lighten($blue, 30%)
+$nav:       #300d71
+
+.container
+  +container(12)
+  // +susy-grid-background()
+  background-color: white
+
+#main, nav, #private, #other-support, #flyers-posters, .intro
+  +span-columns(12 omega, 12)
+
+header
+  #brand
+    +span-columns(12 omega, 12)
+  #logo
+    +span-columns(4 omega, 12)
+    +pre(8)
+  @media screen and (min-width: 600px)
+    #brand
+      +span-columns(9, 12)
+    #logo
+      +span-columns(3 omega, 12)
+      +pre(0)
+
+
+@media screen and (min-width: 640px)
+  .column
+    +span-columns(4, 12)
+  .column-wide
+    +span-columns(6, 12)
+  .column.last, .column-wide.last
+    +omega
+
+
+body
+  color: $logo-sub
+  font-family: Trebuchet MS
+  background-color: lighten($blue, 35%)
+ul
+  padding-left: 1.2em
+h2
+  font-size: 2.25em
+  padding: 0.25em 0.25em
+  background-color: lighten($blue, 50%)
+h3
+  font-size: 1.5em
+  color: $blue
+
+a, a:link, a:visited
+  color: $blue
+
+header
+  h1
+    font-size: 3em
+    color: $logo-main
+    font-weight: bold
+  h1, h3
+    margin-bottom: 0
+    margin-top: 0.75em
+  a
+    text-decoration: none
+
+.nav-container
+  background-color: $nav
+.is-sticky .nav-container
+  // text-align: center
+  margin: 0 auto
+  width: 100%
+  max-width: none
+
+nav .home
+  display: none
+.is-sticky nav .home
+  display: inline-block
+
+nav
+  padding: 0.5em 0
+  font-size: 1.1em
+  background-color: $nav
+  color: white
+  ul
+    margin-left: 1.5em
+  li
+    list-style-type: disc
+  @media screen and (min-width: 520px)
+    text-align: center
+    ul
+      margin: 0
+    li
+      display: inline-block
+      padding: 0 0.5em
+    li:after
+      padding-left: 1em
+      content: ("•")
+    li.last:after
+      padding-left: 0
+      content: none
+  a, a:link, a:visited
+    text-decoration: none
+    color: white
+
+#logo 
+  text-align: center
+  img
+    width: 100%
+    margin-bottom: 1em
+  p
+    font-style: italic
+    margin-bottom: 0
+
+#other-support
+  h2
+    margin-bottom: 0
+
+#flyers-posters
+  img
+    width: 100%
+
+#panic
+  position: fixed
+  opacity: 0.9
+  @media screen and (max-width: 600px)
+    // Presuming if the screen is this small, they're on a phone,
+    // and therefore don't need the button which is basically clutter at this res
+    display: none
+  bottom: 0
+  right: 0
+  z-index: 1
+  padding: 0
+  margin: 0
+  p, h3
+    text-align: right
+    color: white
+    z-index: 100
+    right: 0.5em
+    position: fixed
+  p
+    bottom: 0
+  h3
+    bottom: 2em
+    text-transform: uppercase
+  width: 13em
+  height: 13em
+  border-width: 6.5em
+  border-color:  transparent $purple $purple transparent
+  background-color: transparent
+
+footer
+  padding-bottom: 10em
